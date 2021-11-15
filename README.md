@@ -24,21 +24,20 @@
 
 ## items テーブル
 
-| Column             | Type      | Options     |
-| ------------------ | --------- | ----------- |
-| image              | string    | null: false |
-| name               | string    | null: false |
-| item_condition     | string    | null: false |
-| price              | string    | null: false |
-| category           | string    | null: false |
-| status             | string    | null: false |
-| shopping_charges   | string    | null: false |
-| shopping_area      | string    | null: false |
-| days               | string    | null: false |
-| prefecture_id      | integer   | null: false |
-| user_id            | integer   | null: false, foreign_key: true | 
-| category_id        | integer   | null: false, foreign_key: true | 
-| brand_id           | integer   | null: false, foreign_key: true | 
+| Column              | Type      | Options     |
+| ------------------- | --------- | ----------- |
+| image               | string    | null: false |
+| name                | string    | null: false |
+| item_condition      | string    | null: false |
+| price               | string    | null: false |
+| category_id         | integer   | null: false |
+| status_id           | integer   | null: false |
+| shopping_charges_id | integer   | null: false |
+| shopping_area_id    | integer   | null: false |
+| days_id             | integer   | null: false |
+| prefecture_id       | integer   | null: false |
+| user_id             | integer   | null: false, foreign_key: true | 
+
 
 
 ### Association
