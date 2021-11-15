@@ -17,8 +17,7 @@
 ### Association
 
 - has_many :items
-- has_one :destination
-
+- has_many :orders
 
 
 ## items テーブル
@@ -33,26 +32,27 @@
 | shopping_charges_id | integer    | null: false |
 | shopping_area_id    | integer    | null: false |
 | days_id             | integer    | null: false |
-| seller_id           | references | null: false, foreign_key: true | 
-| buyer_id            | references | null: false, foreign_key: true | 
-
+| user_id             | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- has_many :order
 
 
 
-## credit_cards テーブル
+## orders テーブル
 
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ----------- |
 | user_id            | references | null: false, foreign_key: true |
-| customer_id        | string     | null: false |
+| item_id            | string     | null: false |
 
 ### Association
 
 - belongs_to :user
+- belongs_to :item
+- has_one :destination
 
 
 
@@ -66,8 +66,9 @@
 | address          | string      | null: false |
 | building_name    | string      |
 | phone_number     | string      | null: false |
+| order_id         | references  | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
+- belongs_to :order
 
