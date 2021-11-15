@@ -29,7 +29,7 @@
 | image               | string    | null: false |
 | name                | string    | null: false |
 | item_condition      | string    | null: false |
-| price               | string    | null: false |
+| price               | integer   | null: false |
 | category_id         | integer   | null: false |
 | status_id           | integer   | null: false |
 | shopping_charges_id | integer   | null: false |
