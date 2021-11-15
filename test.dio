@@ -27,7 +27,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="50" value="order" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+                <mxCell id="50" value="orders" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
                     <mxGeometry x="360" y="445" width="240" height="85" as="geometry"/>
                 </mxCell>
                 <mxCell id="130" value="" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#393C56;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=13;endSize=13;targetPerimeterSpacing=0;strokeColor=#E07A5F;strokeWidth=1;fillColor=#F2CC8F;" edge="1" parent="1" source="59">
