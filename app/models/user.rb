@@ -9,10 +9,10 @@ class User < ApplicationRecord
          validates_format_of :password, with: PASSWORD_REGEX
          validates :nickname, presence: true
          validates :email, uniqueness: true
-         validates :family_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
-         validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
-         validates :family_name_kana, format: { with: /\A[\p{katakana}ー－&&[^ -~｡-ﾟ]]+\z/ }
-         validates :first_name_kana, format: { with: /\A[\p{katakana}ー－&&[^ -~｡-ﾟ]]+\z/ }
+         validates :family_name, format: { with: /\A[ぁ-んァ-ン一-龥]/}
+         validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
+         validates :family_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
+         validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
          validates :birth_day
        end
         
