@@ -10,17 +10,7 @@ RSpec.describe User, type: :model do
     it '全ての入力事項が、存在すれば登録できる' do
       expect(@user).to be_valid
     end
-    it 'passwordが6文字以上であれば登録できる' do
-    end
-    it '名字が全角（漢字・ひらがな・カタカナ）であれば登録できる' do
-    end
-    it '名前が全角（漢字・ひらがな・カタカナ）であれば登録できる' do
-    end
-    it '名字のフリガナが全角（カタカナ）であれば登録できる' do
-    end
-    it '名前のフリガナが全角（カタカナ）であれば登録できる' do
-    end
-  end
+   end
 
    context '新規登録がうまくかないとき' do
     it 'nicknameが空では登録できない' do
