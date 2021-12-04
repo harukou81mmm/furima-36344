@@ -12,14 +12,23 @@ class Item < ApplicationRecord
   belongs_to :day
 
 
-  validates :name, presence: true
-  validates :item_condition, presence: true
-  validates :price, presence: true
-  validates :category_id, presence: true
-  validates :status_id, presence: true
-  validates :shopping_charges_id, presence: true
-  validates :shopping_area_id, presence: true
-  validates :day_id, presence: true
-  validates :user, presence: true
+  with_options presence: true do
+    validates :image
+    validates :name
+    validates :item_condition
+    validates :category_id
+    validates :status_id
+    validates :shopping_charges_id
+    validates :shopping_area_id
+    validates :day_id
+    validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
+  end
 
+  with_options numericality: { other_than: 0 } do
+    validates :category_id
+    validates :status_id
+    validates :shopping_charges_id
+    validates :shopping_area_id
+    validates :day_id
+  end
 end
