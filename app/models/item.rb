@@ -22,13 +22,17 @@ class Item < ApplicationRecord
     validates :shopping_area_id
     validates :day_id
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
+    validates :price, numericality: { only_integer: true, message: "Price is not a number." }
   end
 
-  with_options numericality: { other_than: 0 } do
+  with_options numericality: { other_than: 1 } do
     validates :category_id
     validates :status_id
     validates :shopping_charges_id
-    validates :shopping_area_id
     validates :day_id
+  end
+
+  with_options numericality: { other_than: 0 } do
+    validates :shopping_area_id
   end
 end
