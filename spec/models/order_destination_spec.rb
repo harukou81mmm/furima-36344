@@ -14,6 +14,9 @@ RSpec.describe OrderDestination, type: :model do
         @order_destination.building_name = ''
         expect(@order_destination).to be_valid
       end
+      it "priceとtokenがあれば保存ができること" do
+        expect(@order_destination).to be_valid
+      end
     end
 
     context '内容に問題がある場合' do
@@ -66,6 +69,11 @@ RSpec.describe OrderDestination, type: :model do
         @order_destination.item_id = nil
         @order_destination.valid?
         expect(@order_destination.errors.full_messages).to include("Item can't be blank")
+      end
+      it "tokenが空では登録できないこと" do
+        @order_destination.token = nil
+        @order_destination.valid?
+        expect(@order_destination.errors.full_messages).to include("Token can't be blank")
       end
     end
   end
