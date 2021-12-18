@@ -5,7 +5,7 @@ class OrderDestination
   with_options presence: true do
     validates :user_id
     validates :item_id
-    validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)'}
+    validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
     validates :shopping_area_id, numericality: { other_than: 0, message: "can't be blank" }
     validates :city
     validates :address
@@ -13,12 +13,12 @@ class OrderDestination
     validates :token
   end
 
-
   def save
     # 寄付情報を保存し、変数donationに代入する
     order = Order.create(user_id: user_id, item_id: item_id)
     # 住所を保存する
     # donation_idには、変数donationのidと指定する
-    Destination.create(post_code: post_code, shopping_area_id: shopping_area_id, city: city, address: address, building_name: building_name, phone_number: phone_number,  order_id: order.id)
+    Destination.create(post_code: post_code, shopping_area_id: shopping_area_id, city: city, address: address,
+                       building_name: building_name, phone_number: phone_number, order_id: order.id)
   end
 end
