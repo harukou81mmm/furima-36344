@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order_destination do
-    user_id { Faker::Number.non_zero_digit }
-    item_id { Faker::Number.non_zero_digit }
+    association :user
+    association :item
     post_code { Faker::Number.decimal_part(digits: 3) + '-' + Faker::Number.decimal_part(digits: 4) }
     shopping_area_id { Faker::Number.between(from: 1, to: 47) }
     city { Faker::Address.city }
